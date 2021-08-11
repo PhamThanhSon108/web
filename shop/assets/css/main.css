@@ -14,7 +14,7 @@
     margin-top: 4px;
 } 
 img{
-    font-size: 50px;
+    font-size: 60px;
 }
 .header__navbar-item{
    margin: 0 8px;
@@ -64,6 +64,9 @@ img{
 }
 .header__navbar-icon,.header__navbar-item{
     display: inline-block;
+}
+.header__navbar-icon{
+
 }
 /* ---------------------qrcode-------------- */
 /* .header__qr{
