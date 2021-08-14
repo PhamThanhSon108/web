@@ -1,31 +1,34 @@
 .header {
-    height: 120px;
-    background-image: linear-gradient(0, #fe6433,#f53e2d);
+    height: var(--height-header);
+    background-image: linear-gradient(0, #202ca7,#1a0652);
 }
 
 .header__navbar{
     display: flex;
     justify-content: space-between;
-  
+
 }
 .header__navbar-list {
     list-style: none;
     padding-left: 0;
-    margin-top: 4px;
+    margin: 0;
+    margin-top: 10px;
 } 
 img{
-    font-size: 50px;
+    font-size: 55px;
 }
 .header__navbar-item{
    margin: 0 8px;
    position: relative;
    min-height: 26px;
  } 
-
+.header__navbar-icon-link{
+    font-size: 1.6rem;
+}
 .header__navbar-item,
 .header__navbar-item-link{
    display: inline-block;
-   font-size: 1.5rem;
+   font-size: 1.6rem;
    color: var(--while-color);
    text-decoration: none;
    font-weight: 300;
@@ -64,10 +67,117 @@ img{
 }
 .header__navbar-icon,.header__navbar-item{
     display: inline-block;
+    margin-bottom: 0;
 }
-.header__navbar-icon{
+
+/* ------------Thong bao-------------*/
+.header__iden {
+position: absolute;
+top: 120%;
+width: 400%;
+left: -300%;
+background-color: rgb(243, 243, 235);
+display: none;
+border-radius: 2px;
+z-index: 5;
 
 }
+
+ .header__iden-head {
+    display: flex;
+    align-items: center;
+    padding: auto 2px;
+    color: rgba(184, 167, 167, 0.7);
+    margin-bottom: -0px;
+    margin-left: 8px;
+    font-weight: 100;
+    font-size: 1.6rem;
+    cursor: default;
+    font-weight: 300;
+    height: 40px;
+}
+
+
+.header__iden-body-ul{
+    background-color: #445ece;
+    padding-left: 0;
+    width: 100%;
+}
+
+.header__iden-body-li{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f6f7f8;
+}
+
+.header__iden-body-li:hover{
+    background-color: #528fd4;
+}
+
+.header__iden-body {
+    text-decoration: none;
+    display:flex;
+}
+
+
+ img {
+ width: 10%;
+ object-fit: contain;
+ padding: 0px 5px;
+}
+
+.header__iden-content {
+    font-size: 1.5rem;
+    padding: 0px;
+    padding-bottom: 2px;
+    margin: 0px;
+    margin-bottom: 0;
+    font-weight: 400;
+
+}
+
+.header__iden-detail {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.2rem ;
+    opacity: 0.8;
+}
+
+.header__iden-foot {
+
+    color: rgba(163, 137, 137, 0.7);
+    margin-top: -5px;
+    margin-bottom: -5px;
+    border-bottom: 3px solid #202ca7;
+    left: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.header__navbar-item:hover .header__iden{
+    display: block;
+    transform-origin: 90% top;
+    animation: sCale ease-in-out 0.2s;
+    will-change: opacity tranform;
+} 
+
+.header__iden-notify{
+    color: rgb(253, 249, 249);
+}
+
+.header__iden::before 
+{
+    content: "";
+    position: absolute;
+    border: 20px solid ;
+    border-color:  transparent transparent rgb(243, 243, 235) transparent;
+    left: 85%;
+    top: -30px
+}
+
 /* ---------------------qrcode-------------- */
 /* .header__qr{
     width: 186px;
@@ -138,7 +248,7 @@ img{
 /* qrcode */
 .header__qr{
     position: absolute;
-    top: 100%;
+    top: 120%;
     left: 0;
     width: 184px;
     display: none;
@@ -158,4 +268,176 @@ img{
 }
 .header_qr-img{
     width: 100% ;
+}
+/* ------------auther */
+.auth-form{
+    width: 400px;
+  }
+  .auth-form__container{
+    padding: 0px 32px;
+  }
+  .auth-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .auth-form__heading{
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(-text-coler);
+  }
+  .auth-form__switch-btn{
+      cursor: pointer;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: red;
+  }
+  .auth-form__form{
+      margin-top: 16px;
+  }
+  .auth-form__input{
+      width: 100%;
+      height: 40px;
+      margin-top: 16px;
+      padding: 0 12px;
+      font-size: 1.4rem;
+      border-radius: 2px;
+      border: 1px solid var(#f0dcdc);
+      border-color: rgba(243, 243, 235,0.3);
+      outline: none;
+  }
+  .auth-form__input:focus{
+      border-color: rgba(243, 243, 235,0.8);
+  }
+.auth-form__aside{
+    margin-top: 18px;
+    font-size: 1.2rem;
+}
+
+.auth-form__policy-text {
+    font-size: 1.2 rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+.auth-form__policy-link{
+    color:rgba(243, 4, 4, 1);
+    text-decoration: none;
+}
+.auth-form__controls{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 55px;
+    padding-bottom: 5px;
+}
+.auth-form__controls-back{
+    margin-right: 8px;
+}
+
+.btn__icon{
+    font-size: 1.8rem;
+}
+
+.auth-form__socials--facebook,
+.auth-form__socials--google{
+    color: #202ca7;
+}
+/* ----------Headerwithsearch-------- */
+.header-with-search{
+    height: calc(120px - 37.6px);
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.header__search-wrap{
+    flex: 1;
+    height: 100%;
+}
+
+.header__search{
+    flex: 1;
+    height: 40px;
+    display: flex;
+    background-color: white;
+    position: relative;
+}
+
+.header__search-input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-left: 10px ;
+} 
+
+.header__search-select{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #1d58fc;
+    margin: 1px;
+    border: none;
+    cursor: pointer;
+}
+.header__search-select:hover{
+    opacity: 0.9;
+}
+
+.header__search-icon{
+    font-size: 14px;
+}
+
+.header__search-list{
+    display: flex;
+}
+
+.header__logo{
+    width: 200px;
+}
+
+.header__logo-img {
+    width: 146px;    
+}
+
+.header__search-icon{}
+.header__cart{
+    
+}
+.header__cart-icon{
+    font-size: 25px;
+    padding: 0 50px;
+    color: white;
+}
+/* ----------header-history- */
+.header__search-list{
+    position: absolute;
+    list-style: normal;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    margin-top: 5px;
+    width: calc(100% - 10px);
+    display: none;
+}
+.header__search-node{
+    display: flex;
+    height: 40px;
+    padding-left: 10px ;
+    align-items: center;
+}
+
+.header__search-node:hover{
+    opacity: 0.8;
+    background-color: #fff4f4;
+}
+.header__search-node-item{
+    width: 100%;
+    text-decoration: none;
+    align-items: center;
+    font-style: none;
+    font-size: 1.4rem;
+    color: black;
+}
+.header__search-input:focus ~ .header__search-list{
+    display: flex;
 }
