@@ -54,8 +54,9 @@ html{
 
 .home-product-item:hover{
     transform: translateY(-1px);
-    box-shadow: 0px 0px 15px #dddcdc;
+    box-shadow: 0px 0px 20px #dddcdc;
 }
+
 /* ---------animation-------- */
 @keyframes fadeIn{
     from{
